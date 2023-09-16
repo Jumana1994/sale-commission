@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="commission_crm_team_view_form" model="ir.ui.view">
+        <field name="name">crm.team.form.inherited</field>
+        <field name="model">crm.team</field>
+        <field name="inherit_id" ref="sales_team.crm_team_view_form"/>
+        <field name="arch" type="xml">
+
+                    <notebook>
+                        <page string="Sales Person">
+                            <field name="sales_persons" widget="one2many_list">
+                                <tree>
+                                    <field name="sales_person"/>
+                                    <field name="target"/>
+                                    <field name="achieved"/>
+                                    <field name="tier"/>
+                                    <field name="commission"/>
+                                    <field name="min_eligibility"/>
+                                    <field name="percentage"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+
+        </field>
+    </record>
+
+</odoo>
+
